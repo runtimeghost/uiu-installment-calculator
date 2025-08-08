@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block script %}
+<script src="https://cdn.socket.io/4.8.1/socket.io.min.js"
+    integrity="sha384-mkQ3/7FUtcGyoppY6bz/PORYoGqOl7/aSUMn2ymDOJcapfS6PHqxhRTMh1RR0Q6+" crossorigin="anonymous">
+    </script>
+<script src="{{url_for('static', filename='script/index.js')}}"></script>
+{% endblock %}
+
+{% block main %}
+<div class="container">
+    <h2>Enter the following details to calculate installment</h2>
+    <div id="infos">
+        <div class="oldBatch-wrapper">
+            <label for="oldBatch">I got admitted in UIU before <span style="font-weight: 700;">Spring 24</span></label>
+            <select name="oldBatch" id="oldBatch">
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select>
+        </div>
+        <div class="waiver-wrapper">
+            <label for="scholarship">Waiver/Scholarship: </label>
+            <select name="scholarship" id="scholarship">
+                <option value="0" class="scholarship-option">No Waiver/Scholarship</option>
+                <option value="25" class="scholarship-option">25%</option>
+                <option value="50" class="scholarship-option">50%</option>
+                <option value="100" class="scholarship-option">100%</option>
+            </select>
+        </div>
+        <div class="total-credits-wrapper">
+            <label for="credit">Total Credits: </label>
+            <input required id="credit" name="credit" type="number" placeholder="This trimester total credits: ">
+        </div>
+        <div id="transportfee">
+            <label for="transport">Add Transport Fee </label>
+            <input type="checkbox" name="transport" id="transport">
+        </div>
+    </div>
+    <div id="actions">
+        <h2 id="result"></h2>
+        <button id="calc-btn" data-link="{{url_for('calculate')}}"
+            onclick="calculate(this.dataset.link)">Calculate</button>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<h1>{{errorCode}}</h1>
+{% for msg in msgs %}
+<h1 style="text-align: center; font-weight: bold;">{{msg}}</h1>
+{% endfor %}
+<a href="{{ url_for('index') }}"> <button id="home-btn">Home</button> </a>
+{% endblock %}

@@ -1,0 +1,193 @@
+@font-face {
+    font-family: Quicksand;
+    src: url(../fonts/Quicksand.ttf);
+}
+
+
+* {
+    font-family: Quicksand;
+    font-weight: 400;
+    color: wheat;
+}
+
+label {
+    cursor: pointer;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+    background-color: hsl(0, 0%, 0%);
+}
+
+header {
+    flex-grow: 0;
+    border-bottom: 1px solid wheat;
+    width: 100%;
+    height: fit-content;
+}
+
+header>h1 {
+    font-weight: 100;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    height: 100%;
+}
+
+.container {
+    background-color: hsl(0, 0%, 8%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid wheat;
+    height: 600px;
+    width: 380px;
+    border-radius: 25px;
+    padding: 0 16px;
+}
+
+.container>h2 {
+    text-align: center;
+}
+
+#infos {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.waiver-wrapper,
+.oldBatch-wrapper,
+.total-credits-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+#scholarship,
+#oldBatch,
+#credit {
+    width: 200px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#scholarship,
+#oldBatch {
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+#scholarship:hover,
+#oldBatch:hover {
+    box-shadow: 0 0 8px wheat;
+}
+
+#scholarship>option,
+#oldBatch>option {
+    background-color: black;
+    border: 1px solid wheat;
+    border-radius: 28px;
+}
+
+#credit {
+    border: 1px solid grey;
+}
+
+#credit::-webkit-inner-spin-button,
+#credit::-webkit-outer-spin-button {
+    display: none;
+}
+
+#credit::placeholder {
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+}
+
+#transportfee {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#transport {
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    accent-color: hsl(32, 77%, 42%);
+}
+
+
+#actions {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#calc-btn {
+    margin-top: auto;
+    margin-bottom: 64px;
+    height: 48px;
+    width: 128px;
+    border-radius: 8px;
+    border: 1px solid wheat;
+    background-color: transparent;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 0 wheat;
+    transition: all 0.4s;
+}
+
+#calc-btn:hover {
+    opacity: 0.8;
+    box-shadow: 0 0 8px wheat;
+}
+
+#calc-btn:active {
+    opacity: 0.6;
+    box-shadow: 0 0 0 wheat;
+}
+
+/* Error Page */
+#home-btn {
+    height: 64px;
+    width: 256px;
+    background-color: transparent;
+    border: 1px solid wheat;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+#home-btn:hover {
+    box-shadow: 0 0 8px wheat;
+}
