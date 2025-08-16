@@ -59,7 +59,7 @@ def notAllowed(_):
     )
 
 @app.errorhandler(404)
-def notAllowed(_):
+def notFound(_):
 
     return render_template(
         f"error.html",
