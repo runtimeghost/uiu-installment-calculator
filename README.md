@@ -1,4 +1,5 @@
-# UIU Trimester Tuition Fee calculator
+# (Discontinued because there is an erquvalent android app. Check this repository: [UIU Calculator App](https://github.com/runtimeghost/uiu-installment-calc-app))
+## UIU Trimester Tuition Fee calculator
 
 ### Calculate your installment amount for current trimester 
 
